@@ -5,7 +5,6 @@ library(lme4)
 library(sjstats)
 library(cowplot)
 library(lmerTest)
-# options(scipen=999)
 
 # import data
 df1<- read_excel("centering_data.xlsx",sheet="Sheet1")
