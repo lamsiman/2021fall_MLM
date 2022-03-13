@@ -148,9 +148,10 @@ sqrt(var(coef(modlmerc)$subject[,2]))
 # average error variance (msr)
 sigma(modlmerc)^2
 # maximum likelihood estimation for variance of theta
-var(coef(mod)$age)-sigma(modlmerc)^2/1.25
+sst<-sum((unique(ramus_long$age)-mean(unique(ramus_long$age)))^2)
+var(coef(mod)$age)-sigma(modlmerc)^2/sst
 # reliability coefficient for rate of change/reliability of theta
-(var(coef(mod)$age)-sigma(modlmerc)^2/1.25)/var(coef(mod)$age)
+(var(coef(mod)$age)-sigma(modlmerc)^2/sst)/var(coef(mod)$age)
 
 # figure 1.11
 path<-'t2~t1
